@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { Button, Checkbox, Form, Divider } from 'semantic-ui-react'
 
 
 export const Login = props => {
@@ -61,6 +61,11 @@ export const Login = props => {
     //       <button>Create Account</button>
     //     </form>
     //   </div>  
+    <div className="form-container">
+      <div className="btn-container">
+        <button className="user-type-btn user-btn-active">Client</button>
+        <button className="user-type-btn">Trainer</button>
+      </div>
     <Form className="form" onSubmit={event => handleSubmit(event)}>
     <Form.Field className="form-field">
       <input placeholder='First Name' type='text' name="firstName" value={member.firstName} onChange={handleChange}/>
@@ -77,7 +82,9 @@ export const Login = props => {
     <Form.Field className="form-field">
       <input placeholder='Phone Number' type='text' name="phone" value={member.phone} onChange={handleChange}/>
     </Form.Field>
+    <br></br>
     <Button type='submit'>Submit</Button>
   </Form>
+  </div>
     )
 }

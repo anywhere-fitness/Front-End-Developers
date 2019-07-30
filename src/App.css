@@ -6,22 +6,28 @@
   right: 0;
   margin: -10px;
   z-index: -1;
-  background: linear-gradient(rgba(20,20,20, .6), rgba(20,20,20, .6)),url('./img/bodybuilding-exercise-fitness-2294361.jpg');
-  height: 102vh;
-  width: 102vw;
+  background: linear-gradient(rgba(20,20,20, .4), rgba(20,20,20, .9)),url('./img/bodybuilding-exercise-fitness-2294361.jpg');
+  height: 103vh;
+  width: 103vw;
   display: block;
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;
-  filter: blur(2px);
+  filter: blur(3px);
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  margin: 8% auto;
+  background-color:#424242;
+  padding: 3em;
+  box-shadow: 0px 5px 20px 10px rgba(0,0,0,0.15);
+  border-radius: 5px;
 }
 .form{
   display: flex;
   flex-direction: column;
-  width: 33%;
-  margin: 0 auto;
-  padding-top: 5%;
-
 }
 .title{
   color: white;
@@ -31,5 +37,21 @@
 .form-field{
   padding-top: 10px;
 }
+.btn-container{
+  margin: 0 auto;
+}
+.user-type-btn{
+  padding: .75em 2em;
 
+  margin-bottom: 25px;
+  background: #f0f7ef;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+.user-btn-active{
+  background: #1f2322;
+  color: white;
+
+}
 
