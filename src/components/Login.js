@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
 import { Button, Checkbox, Form } from 'semantic-ui-react'
-import '../App.css';
+
 
 export const Login = props => {
 
@@ -64,27 +63,19 @@ export const Login = props => {
     //   </div>  
     <Form className="form" onSubmit={event => handleSubmit(event)}>
     <Form.Field className="form-field">
-      <label>First Name</label>
       <input placeholder='First Name' type='text' name="firstName" value={member.firstName} onChange={handleChange}/>
     </Form.Field>
     <Form.Field className="form-field">
-      <label>Last Name</label>
       <input placeholder='Last Name' type='text' name="lastName" value={member.lastName} onChange={handleChange}/>
     </Form.Field>
     <Form.Field className="form-field">
-      <label>Email</label>
       <input placeholder='Email' type='text' name="email" value={member.email} onChange={handleChange}/>
     </Form.Field>
     <Form.Field className="form-field">
-      <label>Password</label>
       <input placeholder='Password' type='text' name="password" value={member.password} onChange={handleChange}/>
     </Form.Field>
     <Form.Field className="form-field">
-      <label>Phone Number</label>
       <input placeholder='Phone Number' type='text' name="phone" value={member.phone} onChange={handleChange}/>
-    </Form.Field>
-    <Form.Field>
-      <Checkbox label='I agree to the Terms and Conditions' />
     </Form.Field>
     <Button type='submit'>Submit</Button>
   </Form>

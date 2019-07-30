@@ -1,9 +1,35 @@
 
+.App::before{
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: -10px;
+  z-index: -1;
+  background: linear-gradient(rgba(20,20,20, .6), rgba(20,20,20, .6)),url('./img/bodybuilding-exercise-fitness-2294361.jpg');
+  height: 102vh;
+  width: 102vw;
+  display: block;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  filter: blur(2px);
+}
 .form{
   display: flex;
   flex-direction: column;
   width: 33%;
   margin: 0 auto;
-  padding-top: 10%;
+  padding-top: 5%;
 
 }
+.title{
+  color: white;
+  padding: 25px;
+  margin: 25px;
+}
+.form-field{
+  padding-top: 10px;
+}
+
+
