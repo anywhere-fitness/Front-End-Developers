@@ -83,7 +83,7 @@ export const Login = props => {
       <input placeholder='Phone Number' type='text' name="phone" value={member.phone} onChange={handleChange}/>
     </Form.Field>
     <br></br>
-    <Button type='submit'>Submit</Button>
+    <Button type='submit'>Sign Up</Button>
   </Form>
   <button className="member-btn">Already a Member?</button>
   </div>
