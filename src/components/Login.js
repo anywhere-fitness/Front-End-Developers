@@ -85,6 +85,7 @@ export const Login = props => {
     <br></br>
     <Button type='submit'>Submit</Button>
   </Form>
+  <button className="member-btn">Already a Member?</button>
   </div>
     )
 }
