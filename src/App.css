@@ -102,3 +102,43 @@ border-radius: 5px 0px 0px 5px;
 .logo-wrap{
   padding: 25px;
 }
+
+
+.dashboardContainer{
+  display:flex;
+  justify-content: space-evenly;
+  margin-top: 4rem;
+}
+
+.createClassContainer {
+  width: 40rem;
+  height: 30rem;
+  /* margin: 0 auto; */
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.createClassContainer form {
+  
+  margin-top: 2rem;
+  width: 20rem;
+  height: 22rem;
+}
+
+.createClassContainer form div{
+  margin: 1.5rem 0;
+}
+
+.ClassesContainer {
+   width: 40rem;
+  height: 30rem;
+  /* margin: 0 auto; */
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}

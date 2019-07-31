@@ -6,7 +6,7 @@ import {Login} from './Login'
 import {MemberLogin} from './MemberLogin';
 import { ClientDashboard } from './ClientDashboard';
 import { TrainerDashboard } from './TrainerDashboard';
-
+ 
 
 export default function AppRouter() {
   return <div>
