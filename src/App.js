@@ -1,15 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import {Login} from './components/Login'
+import { BrowserRouter as Router } from "react-router-dom";
 import {Navbar} from './components/Navbar'
-import {MemberLogin} from './components/MemberLogin';
 import 'semantic-ui-css/semantic.min.css'
 import './App.css';
+import AppRouter from './components/AppRouter'
 function App() {
   return (
     <div className="App">
+      <Router>
       <Navbar/>
-      <Login/>
+      <AppRouter/>
+      </Router>
     </div>
   );
 }

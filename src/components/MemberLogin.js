@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Checkbox, Form, Divider } from 'semantic-ui-react'
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 export const MemberLogin = props => {
     const [member, setMember] = useState({ email:"", password:""});
 
@@ -29,7 +29,7 @@ export const MemberLogin = props => {
       <br></br>
       <Button type='submit'>Sign In</Button>
     </Form>
-    <button className="member-btn">Don't Have an Account?</button>
+    <button className="member-btn"><Link to="/">Don't Have an Account?</Link></button>
     </div>
     )
 }
