@@ -85,7 +85,7 @@ export const Login = props => {
     <br></br>
     <Button type='submit'>Sign Up</Button>
   </Form>
-  <button className="member-btn"><Link to="/MemberLogin">Already a Member?</Link></button>
+  <button className="member-btn"><Link className="link-btn" to="/MemberLogin">Already a Member?</Link></button>
   </div>
     )
 }

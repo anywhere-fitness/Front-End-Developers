@@ -29,7 +29,7 @@ export const MemberLogin = props => {
       <br></br>
       <Button type='submit'>Sign In</Button>
     </Form>
-    <button className="member-btn"><Link to="/">Don't Have an Account?</Link></button>
+    <button className="member-btn"><Link className="link-btn" to="/">Don't Have an Account?</Link></button>
     </div>
     )
 }

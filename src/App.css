@@ -48,6 +48,7 @@
   border: none;
   font-size: 20px;
   font-weight: 500;
+  color: white;
 }
 .user-btn-active{
   background: #1f2322;
@@ -61,8 +62,13 @@
   cursor: pointer;
   width: max-content;
   margin: 0 auto;
-  color: grey;
 }
 .member-btn:hover{
+  color: white;
+}
+.link-btn{
+  color: grey;
+}
+.link-btn:hover{
   color: white;
 }
