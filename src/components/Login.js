@@ -15,6 +15,8 @@ export const Login = props => {
        setMember({ firstName: "", lastName: "", email:"", password:"", phone:""})
          };
 
+         const [isClient, setIsClient] = useState(true)
+         
     return(
     //     <div className="Form">
     //     <form onSubmit={event => handleSubmit(event)}>
@@ -83,7 +85,7 @@ export const Login = props => {
       <input placeholder='Phone Number' type='text' name="phone" value={member.phone} onChange={handleChange}/>
     </Form.Field>
     <br></br>
-    <Button type='submit'>Sign Up</Button>
+    <Button type='submit'><Link className="submit-btn"to="/ClientDashboard">Sign Up</Link></Button>
   </Form>
   <button className="member-btn"><Link className="link-btn" to="/MemberLogin">Already a Member?</Link></button>
   </div>
