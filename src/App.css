@@ -32,8 +32,8 @@
 }
 .title{
   color: white;
-  padding: 25px;
-  margin: 25px;
+  vertical-align: middle;
+  display: inline;
 }
 .form-field{
   padding-top: 10px;
@@ -93,4 +93,12 @@ border-radius: 5px 0px 0px 5px;
   height: 100vh;
 
 
+}
+.logo{
+  width: 50px;
+  display: inline;
+  vertical-align: middle;
+}
+.logo-wrap{
+  padding: 25px;
 }
