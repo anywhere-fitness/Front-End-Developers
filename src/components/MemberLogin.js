@@ -12,12 +12,28 @@ export const MemberLogin = props => {
         event.preventDefault();
        setMember({ email:"", password:""})
          };
+         const [isClient, setIsClient] = useState(true)
 
+         const removeClassBtn = () =>{
+          document.querySelectorAll(".user-type-btn").forEach(el => el.classList.remove("user-btn-active"));
+         }
     return(
         <div className="form-container">
         <div className="btn-container">
-          <button className="user-type-btn user-btn-active">Client</button>
-          <button className="user-type-btn">Trainer</button>
+        <button id="b1"className="user-type-btn user-btn-active" onClick={() =>{
+               setIsClient(true);
+          removeClassBtn()
+          document.getElementById("b1").classList.add("user-btn-active");
+     
+        
+        }}>Client</button>
+        <button id="b2"className="user-type-btn" onClick={() =>{
+           setIsClient(false);
+        removeClassBtn()
+          document.getElementById("b2").classList.add("user-btn-active");
+         
+        
+        }}>Trainer</button>
         </div>
       <Form className="form" onSubmit={event => handleSubmit(event)}>
       <Form.Field className="form-field">
@@ -27,7 +43,7 @@ export const MemberLogin = props => {
         <input placeholder='Password' type='text' name="password" value={member.password} onChange={handleChange}/>
       </Form.Field>
       <br></br>
-      <Button type='submit'>Sign In</Button>
+      <Button type='submit'><Link className="submit-btn" to={(isClient ? "/ClientDashboard" : "/TrainerDashboard")}>Sign In</Link></Button>
     </Form>
     <button className="member-btn"><Link className="link-btn" to="/">Don't Have an Account?</Link></button>
     </div>

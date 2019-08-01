@@ -15,58 +15,34 @@ export const Login = props => {
        setMember({ firstName: "", lastName: "", email:"", password:"", phone:""})
          };
 
+        
+        
+        
+        
          const [isClient, setIsClient] = useState(true)
+         const removeClassBtn = () =>{
+          document.querySelectorAll(".user-type-btn").forEach(el => el.classList.remove("user-btn-active"));
+         }
+       
          
     return(
-    //     <div className="Form">
-    //     <form onSubmit={event => handleSubmit(event)}>
-    //         <input
-    //           placeholder="First Name"
-    //           type="text"
-    //           name="firstName"
-    //           value={member.firstName}
-    //           onChange={handleChange}
-    //         />
-    //       <br></br>
-    //         <input
-    //           placeholder="Last Name"
-    //           type="text"
-    //           name="lastName"
-    //           value={member.lastName}
-    //           onChange={handleChange}
-    //         />
-    //       <br></br>
-    //         <input
-    //           placeholder="Email Address"
-    //           type="text"
-    //           name="email"
-    //           value={member.email}
-    //           onChange={handleChange}
-    //         />
-    //       <br></br>
-    //       <input
-    //           placeholder="Password"
-    //           type="text"
-    //           name="password"
-    //           value={member.password}
-    //           onChange={handleChange}
-    //         />
-    //       <br></br>
-    //       <input
-    //           placeholder="Phone Number"
-    //           type="text"
-    //           name="phone"
-    //           value={member.phone}
-    //           onChange={handleChange}
-    //         />
-    //       <br></br>
-    //       <button>Create Account</button>
-    //     </form>
-    //   </div>  
+    
     <div className="form-container">
       <div className="btn-container">
-        <button className="user-type-btn user-btn-active">Client</button>
-        <button className="user-type-btn">Trainer</button>
+        <button id="b3"className="user-type-btn user-btn-active" onClick={() =>{
+               setIsClient(true);
+                removeClassBtn();
+                document.getElementById("b3").classList.add("user-btn-active");
+     
+        
+        }}>Client</button>
+        <button id="b4" className="user-type-btn" onClick={() =>{
+               setIsClient(false);
+                removeClassBtn();
+                document.getElementById("b4").classList.add("user-btn-active");
+     
+        
+        }}>Trainer</button>
       </div>
     <Form className="form" onSubmit={event => handleSubmit(event)}>
     <Form.Field className="form-field">
@@ -85,7 +61,7 @@ export const Login = props => {
       <input placeholder='Phone Number' type='text' name="phone" value={member.phone} onChange={handleChange}/>
     </Form.Field>
     <br></br>
-    <Button type='submit'><Link className="submit-btn"to="/ClientDashboard">Sign Up</Link></Button>
+    <Button type='submit'><Link className="submit-btn" to={(isClient ? "/ClientDashboard" : "/TrainerDashboard")}>Sign Up</Link></Button>
   </Form>
   <button className="member-btn"><Link className="link-btn" to="/MemberLogin">Already a Member?</Link></button>
   </div>
