@@ -1,7 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect}  from 'react'
+import Nav from './TrainerNavBar'
+import { CreateClass } from './trainerCreateClass';
+import { MyClasses } from './MyClasses';
 
-export const TrainerDashboard = props =>{
-    return(
-        <h1>Trainer Dashboard</h1>
+
+export function TrainerDashboard (){
+
+
+    return (
+        <div>
+            <Nav />
+        <div className="dashboardContainer">
+           <CreateClass/>
+           <MyClasses />
+        </div>
+        </div>
     )
 }
