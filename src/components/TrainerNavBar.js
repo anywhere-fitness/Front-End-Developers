@@ -19,6 +19,16 @@ export default class Nav extends Component {
             </Menu.Item>
           </Menu.Menu>
           <Menu.Menu position='right'>
+            <Link to="/trainerDashboard"><Menu.Item
+              name='Home'
+              active={activeItem === 'logout'}
+              onClick={this.handleItemClick}
+            /></Link>
+            <Link to="/Team"><Menu.Item
+              name='Team'
+              active={activeItem === 'logout'}
+              onClick={this.handleItemClick}
+            /></Link>
             <Link to="/"><Menu.Item
               name='logout'
               active={activeItem === 'logout'}

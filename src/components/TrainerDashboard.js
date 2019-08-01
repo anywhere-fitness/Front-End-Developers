@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect}  from 'react'
 import Nav from './TrainerNavBar'
 import { CreateClass } from './trainerCreateClass';
 import { MyClasses } from './MyClasses';
 
 
 export function TrainerDashboard (){
+
 
     return (
         <div>

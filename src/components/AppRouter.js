@@ -6,6 +6,7 @@ import {Login} from './Login'
 import {MemberLogin} from './MemberLogin';
 import { ClientDashboard } from './ClientDashboard';
 import { TrainerDashboard } from './TrainerDashboard';
+import  TrainerTeam  from './TrainerTeam'
  
 
 export default function AppRouter() {
@@ -14,6 +15,7 @@ export default function AppRouter() {
       <Route path='/MemberLogin' component={MemberLogin} />
       <Route path='/ClientDashboard' component={ClientDashboard} />
       <Route path='/TrainerDashboard' component={TrainerDashboard} />
+      <Route path='/Team' component={TrainerTeam} />
       <Route exact path='/' component={Login} />
     </Switch>
   </div>
