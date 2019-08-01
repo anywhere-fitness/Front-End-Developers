@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Checkbox, Form, Divider } from 'semantic-ui-react'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import axios from 'axios'
 
 export const Login = props => {
 
@@ -12,18 +13,22 @@ export const Login = props => {
 
     const handleSubmit = event => {
         event.preventDefault();
-       setMember({ firstName: "", lastName: "", email:"", password:"", phone:""})
+        setMember({ firstName: "", lastName: "", email:"", password:"", phone:""})
          };
 
-        
-        
-        
-        
-         const [isClient, setIsClient] = useState(true)
+    const [isClient, setIsClient] = useState(true)
          const removeClassBtn = () =>{
           document.querySelectorAll(".user-type-btn").forEach(el => el.classList.remove("user-btn-active"));
          }
-       
+         useEffect(() => {
+          axios.get('https://anywhere-fitness-be-jrl.herokuapp.com/api/users')
+          .then(res => {
+            console.log(res.data)
+          })
+          .catch(e => {
+            console.log(e)
+          });
+        }, []);
          
     return(
     
