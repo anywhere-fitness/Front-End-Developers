@@ -50,6 +50,9 @@
   font-weight: 500;
   color: black;
 }
+.user-type-btn:focus {
+  outline: none;
+}
 .user-type-btn:first-child{
 border-radius: 5px 0px 0px 5px;
 }
@@ -91,12 +94,10 @@ border-radius: 5px 0px 0px 5px;
   left: 0;
   right: 0;
   height: 100vh;
-
-
 }
 .logo{
   width: 50px;
-  display: inline;
+  display: inline-block;
   vertical-align: middle;
 }
 .logo-wrap{
