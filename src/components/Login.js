@@ -39,7 +39,6 @@ export const Login = props => {
                 removeClassBtn();
                 document.getElementById("b3").classList.add("user-btn-active");
      
-        
         }}>Client</button>
         <button id="b4" className="user-type-btn" onClick={() =>{
                setIsClient(false);
