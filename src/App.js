@@ -3,15 +3,21 @@ import { BrowserRouter as Router } from "react-router-dom";
 import AppRouter from './components/AppRouter'
 import {Navbar} from './components/Navbar'
 import 'semantic-ui-css/semantic.min.css'
+
 import './App.css';
 
+
 function App() {
+
+
+
   return (
     <div className="App">
       <Router>
       <Navbar/>
       <AppRouter/>
       </Router>
+     
     </div>
   );
 }
